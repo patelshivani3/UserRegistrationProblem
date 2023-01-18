@@ -44,5 +44,11 @@ namespace UserRegistrationProblem
             string pattern = "^[91]*[ ]*[6-9]{1}[0-9]{9}$";
             return TestMethod(input, pattern);
         }
+        //UC5 Validate Password minimum 8 charactor
+        public string Password(string input)
+        {
+            string pattern = "^[a-zA-Z0-9]{8,}$";
+            return TestMethod(input, pattern);
+        }
     }
 }

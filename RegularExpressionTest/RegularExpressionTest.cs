@@ -66,5 +66,20 @@ namespace RegularExpressionTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [TestCategory("Password")]
+        [DataRow("adhbuevw", "Valid")]
+        [DataRow("abcd", "Invalid")]
+        public void ValidatePassword(string input, string expected)
+        {
+            //AAA methodology
+            //Arrange
+            RegularExpression regularExpression = new RegularExpression();
+            //Act
+            string actual = regularExpression.Password(input);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
