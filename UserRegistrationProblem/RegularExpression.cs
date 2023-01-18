@@ -53,5 +53,10 @@ namespace UserRegistrationProblem
             string pattern = "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,}$";
             return TestMethod(input, pattern);
         }
+        public string EmailSample(string input)
+        {
+            string pattern = "^[a-zA-Z0-9]+([.,-][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
+            return TestMethod(input, pattern);
+        }
     }
 }
