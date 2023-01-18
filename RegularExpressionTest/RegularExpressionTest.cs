@@ -69,7 +69,7 @@ namespace RegularExpressionTestProject
 
         [TestMethod]
         [TestCategory("Password")]
-        [DataRow("Password1", "Valid")]
+        [DataRow("Password@1", "Valid")]
         [DataRow("abcd", "Invalid")]
         public void ValidatePassword(string input, string expected)
         {
