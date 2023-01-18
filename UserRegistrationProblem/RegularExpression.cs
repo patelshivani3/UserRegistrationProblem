@@ -44,11 +44,12 @@ namespace UserRegistrationProblem
             string pattern = "^[91]*[ ]*[6-9]{1}[0-9]{9}$";
             return TestMethod(input, pattern);
         }
-        //UC5 Validate Password minimum 8 charactor
-        //UC6 AtLeast 1 UpperCase   // "^[a-zA-Z0-9]{8,}$";
+        //UC5 Validate Password minimum 8 charactor         "^[a-zA-Z0-9]{8,}$";
+        //UC6 AtLeast 1 UpperCase                           "^(?=.*?[A-Z]).{8,}$";  
+        //UC7 AtLeast 1 numeric
         public string Password(string input)
         {
-            string pattern = "^(?=.*?[A-Z]).{8,}$";
+            string pattern = "^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$";
             return TestMethod(input, pattern);
         }
     }
