@@ -35,5 +35,19 @@ namespace RegularExpressionTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        [TestCategory("Email")]
+        [DataRow("Patel@gmail.com", "Valid")]
+        [DataRow("123abc", "Invalid")]
+        public void ValidateEmail(string input, string expected)
+        {
+            //AAA methodology
+            //Arrange
+            RegularExpression regularExpression = new RegularExpression();
+            //Act
+            string actual = regularExpression.Email(input);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
