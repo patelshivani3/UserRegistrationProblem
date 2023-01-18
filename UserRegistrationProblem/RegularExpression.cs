@@ -38,5 +38,11 @@ namespace UserRegistrationProblem
             string pattern = "^[a-zA-Z0-9]+([.,-][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
             return TestMethod(input, pattern);
         }
+        //UC4 Validate Mobile Number
+        public string MobileNo(string input)
+        {
+            string pattern = "^[91]*[ ]*[6-9]{1}[0-9]{9}$";
+            return TestMethod(input, pattern);
+        }
     }
 }

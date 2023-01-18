@@ -21,6 +21,7 @@ namespace RegularExpressionTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         [TestCategory("Last Name")]
         [DataRow("Patel", "Valid")]
@@ -35,6 +36,7 @@ namespace RegularExpressionTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         [TestCategory("Email")]
         [DataRow("Patel@gmail.com", "Valid")]
@@ -46,6 +48,21 @@ namespace RegularExpressionTestProject
             RegularExpression regularExpression = new RegularExpression();
             //Act
             string actual = regularExpression.Email(input);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [TestCategory("Mobile Number")]
+        [DataRow("91 7813245678", "Valid")]
+        [DataRow("1231233", "Invalid")]
+        public void ValidateMobileNumber(string input, string expected)
+        {
+            //AAA methodology
+            //Arrange
+            RegularExpression regularExpression = new RegularExpression();
+            //Act
+            string actual = regularExpression.MobileNo(input);
             //Assert
             Assert.AreEqual(expected, actual);
         }
