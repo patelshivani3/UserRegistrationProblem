@@ -26,5 +26,11 @@ namespace UserRegistrationProblem
             string pattern = "^[a-zA-Z]{3,}$";
             return TestMethod(input, pattern);
         }
+        //UC2 Validate Last Name
+        public  string  LastName(string input)
+        {
+            string pattern = "^[a-zA-Z]{3,}$";
+            return TestMethod(input, pattern);
+        }
     }
 }

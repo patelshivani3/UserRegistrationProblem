@@ -21,5 +21,19 @@ namespace RegularExpressionTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        [TestCategory("Last Name")]
+        [DataRow("Patel", "Valid")]
+        [DataRow("123abc", "Invalid")]
+        public void ValidateLastName(string input, string expected)
+        {
+            //AAA methodology
+            //Arrange
+            RegularExpression regularExpression = new RegularExpression();
+            //Act
+            string actual = regularExpression.LastName(input);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
