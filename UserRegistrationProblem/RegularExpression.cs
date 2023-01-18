@@ -45,9 +45,10 @@ namespace UserRegistrationProblem
             return TestMethod(input, pattern);
         }
         //UC5 Validate Password minimum 8 charactor
+        //UC6 AtLeast 1 UpperCase   // "^[a-zA-Z0-9]{8,}$";
         public string Password(string input)
         {
-            string pattern = "^[a-zA-Z0-9]{8,}$";
+            string pattern = "^(?=.*?[A-Z]).{8,}$";
             return TestMethod(input, pattern);
         }
     }
