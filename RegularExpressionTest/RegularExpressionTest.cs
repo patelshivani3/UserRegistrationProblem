@@ -15,9 +15,9 @@ namespace RegularExpressionTestProject
         {
             //AAA methodology
             //Arrange
-            RegularExpression regularExpression = new RegularExpression();
+            RegularExpression regularExpression = new RegularExpression(input);
             //Act
-            string actual = regularExpression.FirstName(input);
+            string actual = regularExpression.FirstName();
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -30,9 +30,9 @@ namespace RegularExpressionTestProject
         {
             //AAA methodology
             //Arrange
-            RegularExpression regularExpression = new RegularExpression();
+            RegularExpression regularExpression = new RegularExpression(input);
             //Act
-            string actual = regularExpression.LastName(input);
+            string actual = regularExpression.LastName();
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -45,24 +45,24 @@ namespace RegularExpressionTestProject
         {
             //AAA methodology
             //Arrange
-            RegularExpression regularExpression = new RegularExpression();
+            RegularExpression regularExpression = new RegularExpression(input);
             //Act
-            string actual = regularExpression.Email(input);
+            string actual = regularExpression.Email();
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         [TestCategory("Mobile Number")]
-        [DataRow("91 7813245678", "Valid")]
+        [DataRow("7235456770", "Valid")]
         [DataRow("1231233", "Invalid")]
         public void ValidateMobileNumber(string input, string expected)
         {
             //AAA methodology
             //Arrange
-            RegularExpression regularExpression = new RegularExpression();
+            RegularExpression regularExpression = new RegularExpression(input);
             //Act
-            string actual = regularExpression.MobileNo(input);
+            string actual = regularExpression.MobileNo();
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -75,9 +75,9 @@ namespace RegularExpressionTestProject
         {
             //AAA methodology
             //Arrange
-            RegularExpression regularExpression = new RegularExpression();
+            RegularExpression regularExpression = new RegularExpression(input);
             //Act
-            string actual = regularExpression.Password(input);
+            string actual = regularExpression.Password();
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -93,9 +93,9 @@ namespace RegularExpressionTestProject
         {
             //AAA methodology
             //Arrange
-            RegularExpression regularExpression = new RegularExpression();
+            RegularExpression regularExpression = new RegularExpression(input);
             //Act
-            string actual = regularExpression.EmailSample(input);
+            string actual = regularExpression.EmailSample();
             //Assert
             Assert.AreEqual(expected, actual);
         }
