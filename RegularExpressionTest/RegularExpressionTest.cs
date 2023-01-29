@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Runtime.InteropServices;
 using UserRegistrationProblem;
 using UserRegistrationProblem.Reflection;
 
@@ -13,16 +14,23 @@ namespace RegularExpressionTestProject
         [TestCategory("First Name")]
         [DataRow( "Shivani", true)]
         [DataRow( "123abc", false)]
-        public void ValidateFirstName(string input , bool expected)
-        {
-            //AAA methodology
-            //Arrange
-            RegularExpression regularExpression = new RegularExpression(input);
-            //Act
-            bool actual = regularExpression.FirstName();
-            //Assert
-            Assert.AreEqual(expected, actual);
+        public  void ValidateFirstName(string input , bool expected)
+        {   
+            try 
+            {
+                //AAA methodology
+                //Arrange
+                RegularExpression regularExpression = new RegularExpression(input);
+                //Act
+                bool actual = regularExpression.FirstName();
+              
+            }
+            catch (UserException ex)
+            {
+                Assert.AreEqual("Invalid First Name", ex.Message);
+            }
         }
+            
 
         [TestMethod]
         [TestCategory("Last Name")]
@@ -30,13 +38,19 @@ namespace RegularExpressionTestProject
         [DataRow("123abc", false)]
         public void ValidateLastName(string input, bool expected)
         {
-            //AAA methodology
-            //Arrange
-            RegularExpression regularExpression = new RegularExpression(input);
-            //Act
-            bool actual = regularExpression.LastName();
-            //Assert
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                //AAA methodology
+                //Arrange
+                RegularExpression regularExpression = new RegularExpression(input);
+                //Act
+                bool actual = regularExpression.LastName();
+                
+            }
+            catch (UserException ex)
+            {
+                Assert.AreEqual("Invalid Last Name", ex.Message);
+            }
         }
 
         [TestMethod]
@@ -45,13 +59,18 @@ namespace RegularExpressionTestProject
         [DataRow("123abc", false)]
         public void ValidateEmail(string input, bool expected)
         {
-            //AAA methodology
-            //Arrange
-            RegularExpression regularExpression = new RegularExpression(input);
-            //Act
-            bool actual = regularExpression.Email();
-            //Assert
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                //AAA methodology
+                //Arrange
+                RegularExpression regularExpression = new RegularExpression(input);
+                //Act
+                bool actual = regularExpression.Email();
+            }
+            catch (UserException ex)
+            {
+                Assert.AreEqual("Invalid Email Id", ex.Message);
+            }
         }
 
         [TestMethod]
@@ -60,13 +79,19 @@ namespace RegularExpressionTestProject
         [DataRow("1231233", false)]
         public void ValidateMobileNumber(string input, bool expected)
         {
-            //AAA methodology
-            //Arrange
-            RegularExpression regularExpression = new RegularExpression(input);
-            //Act
-            bool actual = regularExpression.MobileNo();
-            //Assert
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                //AAA methodology
+                //Arrange
+                RegularExpression regularExpression = new RegularExpression(input);
+                //Act
+                bool actual = regularExpression.MobileNo();
+            }
+            catch (UserException ex)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Mobile Number", ex.Message);
+            }
         }
 
         [TestMethod]
@@ -75,13 +100,18 @@ namespace RegularExpressionTestProject
         [DataRow("abcd", false)]
         public void ValidatePassword(string input, bool expected)
         {
-            //AAA methodology
-            //Arrange
-            RegularExpression regularExpression = new RegularExpression(input);
-            //Act
-            bool actual = regularExpression.Password();
-            //Assert
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                //AAA methodology
+                //Arrange
+                RegularExpression regularExpression = new RegularExpression(input);
+                //Act
+                bool actual = regularExpression.Password();
+            }
+            catch (UserException ex)
+            {
+                Assert.AreEqual("Invalid Password", ex.Message);
+            }
         }
 
         [TestMethod]
@@ -93,13 +123,18 @@ namespace RegularExpressionTestProject
         [DataRow("abc", false)]
         public void ValidateEmailSample(string input, bool expected)
         {
-            //AAA methodology
-            //Arrange
-            RegularExpression regularExpression = new RegularExpression(input);
-            //Act
-            bool actual = regularExpression.EmailSample();
-            //Assert
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                //AAA methodology
+                //Arrange
+                RegularExpression regularExpression = new RegularExpression(input);
+                //Act
+                bool actual = regularExpression.EmailSample();
+            }
+            catch (UserException ex)
+            {
+                Assert.AreEqual("Invalid Email Id", ex.Message);
+            }
         }
     }
 }

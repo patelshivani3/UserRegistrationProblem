@@ -26,24 +26,54 @@ namespace UserRegistrationProblem
         }
         
         //UC1 Validate First Name
-        public  bool  FirstName()
+        public bool FirstName()
         {
-             return Regex.IsMatch(input, firstName);
+
+            if (Regex.IsMatch(input, firstName))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UserException("Invalid First Name", UserException.ExceptionType.INVALID_FIRST_NAME);
+            }
+
         }
         //UC2 Validate Last Name
         public  bool  LastName()
         {
-            return Regex.IsMatch(input, lastName);
+            if (Regex.IsMatch(input, lastName))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UserException("Invalid Last Name", UserException.ExceptionType.INVALID_LAST_NAME);
+            }
         }
         //UC3 Validate Email
         public bool Email()
         {
-            return Regex.IsMatch(input, email);
+            if( Regex.IsMatch(input, email))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UserException("Invalid Email Id", UserException.ExceptionType.INVALID_EMAIL);
+            }
         }
         //UC4 Validate Mobile Number
         public bool MobileNo()
         {
-            return Regex.IsMatch( input, mobileNumber);
+            if( Regex.IsMatch( input, mobileNumber))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UserException("Invalid Mobile Number", UserException.ExceptionType.INVALID_MOBILE_NUMBER);
+            }
         }
         //UC5 Validate Password minimum 8 charactor         "^[a-zA-Z0-9]{8,}$";
         //UC6 AtLeast 1 UpperCase                           "^(?=.*?[A-Z]).{8,}$";  
@@ -51,12 +81,26 @@ namespace UserRegistrationProblem
         //UC8 AtLeast 1 special character
         public bool Password()
         {
-            return Regex.IsMatch(input, password);
+            if( Regex.IsMatch(input, password))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UserException("Invalid Password", UserException.ExceptionType.INVALID_PASSWORD);
+            }
         }
         //UC9 Validate Email Samples
         public bool EmailSample()
         {
-            return Regex.IsMatch(input , emailSample);
+            if( Regex.IsMatch(input , emailSample))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UserException("Invalid Email Id", UserException.ExceptionType.INVALID_EMAIL);
+            }
         }
     }
 }
