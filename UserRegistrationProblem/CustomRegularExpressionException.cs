@@ -12,6 +12,8 @@ namespace UserRegistrationProblem
         public enum ExceptionTypes
         {
             NULL_INPUT,
+            CLASS_NOT_FOUND,
+            NO_SUCH_METHOD
         }
         public CustomRegularExpressionException(string msg, ExceptionTypes exceptionTypes) : base(msg)
         {

@@ -10,10 +10,10 @@ namespace UserRegistrationProblem
     public class RegularExpression
     {
         public string input;
-        //public RegularExpression()
-        //{
+        public RegularExpression()
+        {
 
-        //}
+        }
         public RegularExpression(string input)
         {
             this.input = input;

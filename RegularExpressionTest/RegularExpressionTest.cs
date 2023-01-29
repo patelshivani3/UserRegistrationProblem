@@ -1,12 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using UserRegistrationProblem;
+using UserRegistrationProblem.Reflection;
 
 namespace RegularExpressionTestProject
 {
     [TestClass]
     public class RegularExpressionTest
     {
+        RegularExpressionFactory factory = new RegularExpressionFactory();
+
         [TestMethod]
         [TestCategory("First Name")]
         [DataRow( "Shivani", "Valid")]
@@ -98,6 +101,34 @@ namespace RegularExpressionTestProject
             string actual = regularExpression.EmailSample();
             //Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [TestCategory("Reflection")]
+        
+        [DataRow("UserRegistrationProblem", "RegularExpression")]
+        
+       // [DataRow("UserRegistrationProblem.Customer", "Customer")]
+        
+        
+        public void Gievn_Class_Info_Return_Default_Constructor(string className, string constructor)
+        {
+            string expectedMsg = "Constructor not found";
+
+            try
+            {
+                //AAA Methodology
+                //Arrange
+                Object expected = new RegularExpression();
+                object actual = factory.CreateRegularExpression(className, constructor);
+                //Act
+                actual.Equals(expected);
+            }
+            catch (CustomRegularExpressionException ex)
+            {
+                //Assert
+                Assert.AreEqual(expectedMsg, ex.Message);
+            }
         }
     }
 }
