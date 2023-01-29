@@ -22,7 +22,7 @@ namespace RegularExpressionTestProject
                 //Arrange
                 RegularExpression regularExpression = new RegularExpression(input);
                 //Act
-                bool actual = regularExpression.FirstName();
+                bool actual = regularExpression.FirstName(input);
               
             }
             catch (UserException ex)
@@ -44,7 +44,7 @@ namespace RegularExpressionTestProject
                 //Arrange
                 RegularExpression regularExpression = new RegularExpression(input);
                 //Act
-                bool actual = regularExpression.LastName();
+                bool actual = regularExpression.LastName(input);
                 
             }
             catch (UserException ex)
@@ -65,7 +65,7 @@ namespace RegularExpressionTestProject
                 //Arrange
                 RegularExpression regularExpression = new RegularExpression(input);
                 //Act
-                bool actual = regularExpression.Email();
+                bool actual = regularExpression.Email(input);
             }
             catch (UserException ex)
             {
@@ -85,7 +85,7 @@ namespace RegularExpressionTestProject
                 //Arrange
                 RegularExpression regularExpression = new RegularExpression(input);
                 //Act
-                bool actual = regularExpression.MobileNo();
+                bool actual = regularExpression.MobileNo(input);
             }
             catch (UserException ex)
             {
@@ -106,7 +106,7 @@ namespace RegularExpressionTestProject
                 //Arrange
                 RegularExpression regularExpression = new RegularExpression(input);
                 //Act
-                bool actual = regularExpression.Password();
+                bool actual = regularExpression.Password(input);
             }
             catch (UserException ex)
             {
@@ -129,7 +129,7 @@ namespace RegularExpressionTestProject
                 //Arrange
                 RegularExpression regularExpression = new RegularExpression(input);
                 //Act
-                bool actual = regularExpression.EmailSample();
+                bool actual = regularExpression.EmailSample(input);
             }
             catch (UserException ex)
             {
