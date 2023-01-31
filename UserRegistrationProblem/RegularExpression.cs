@@ -26,16 +26,16 @@ namespace UserRegistrationProblem
         }
 
         // Validate First Name
-        public bool FirstName(string firstname) => (Regex.IsMatch(input, firstName)) ?true : throw new UserException("Invalid First Name", UserException.ExceptionType.INVALID_FIRST_NAME);
+        public bool FirstName(string firstname) => (Regex.IsMatch(input, firstName));
         // Validate Last Name
-        public bool LastName(string lastname) => (Regex.IsMatch(input, lastName)) ?true : throw new UserException("Invalid Last Name", UserException.ExceptionType.INVALID_LAST_NAME);
+        public bool LastName(string lastname) => (Regex.IsMatch(input, lastName));
         // Validate Email
-        public bool Email(string email) => (Regex.IsMatch(input, emailId)) ?true : throw new UserException("Invalid Email Id", UserException.ExceptionType.INVALID_EMAIL);
+        public bool Email(string email) => (Regex.IsMatch(input, emailId));
         // Validate Mobile Number
-        public bool MobileNo(string mobileno) => (Regex.IsMatch(input, mobileNumber)) ?true : throw new UserException("Invalid Mobile Number", UserException.ExceptionType.INVALID_MOBILE_NUMBER);
+        public bool MobileNo(string mobileno) => (Regex.IsMatch(input, mobileNumber));
         // Validate Password
-        public bool Password(string userPassword) => (Regex.IsMatch(input, password)) ?true : throw new UserException("Invalid Password", UserException.ExceptionType.INVALID_PASSWORD);
+        public bool Password(string userPassword) => (Regex.IsMatch(input, password));
         // Validate Email Samples
-        public bool EmailSample(string emails) => ( Regex.IsMatch(input , emailSample)) ?true : throw new UserException("Invalid Email Id", UserException.ExceptionType.INVALID_EMAIL);
+        public bool EmailSample(string emails) => (Regex.IsMatch(input, emailSample));
     }
 }
